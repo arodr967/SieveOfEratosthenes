@@ -6,7 +6,7 @@
  Panther ID: 5162522
  
  Description:
- The Main function file.
+ The Main function file
 */
 
 #include "SieveOfEratosthenes_5162522_A2_main.h"
