@@ -16,5 +16,5 @@
 /* Must set the return value to void */
 void main()
 {
-    
+    printf("Hello");
 }
