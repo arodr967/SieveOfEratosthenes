@@ -9,7 +9,7 @@
  The Main function file
 */
 
-#include "SieveOfEratosthenes_5162522_A2_main.h"
+#include "SieveOfEratosthenes_5162522_A2.h"
 #include <stdio.h>
 #include <math.h>
 
