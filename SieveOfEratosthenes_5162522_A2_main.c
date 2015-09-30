@@ -22,8 +22,19 @@ int main()
 {
     int userInput;
     
-    printf("Please choose a number from 2 - 10000 for your upper limit: \n");
-    scanf("%d", &userInput);
-    
-    printf("%s %d \n", "This is your input: ", userInput);
+    do {
+        
+        printf("Please choose a number from 2 - 10000 for your upper limit: ");
+        scanf("%d", &userInput);
+        
+        printf("\n");
+        
+        printf("%s %d \n", "This is your input: ", userInput);
+        
+        if (userInput >= 2 && userInput <= 10000)
+        {
+            printf("Your input is OK.\n");
+        }
+        
+    } while (userInput < 2 || userInput > 10000);
 }
