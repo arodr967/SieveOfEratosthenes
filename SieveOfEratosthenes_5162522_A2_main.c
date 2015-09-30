@@ -57,6 +57,8 @@ int main()
    2 and userInput */
 void primeSearch(int userInput)
 {
+    int i, j, insert;
+    
     printf("Welcome!\n");
     printf("%s %d \n", "We are going to search for all of the prime numbers between 2 and", userInput);
     
@@ -65,9 +67,9 @@ void primeSearch(int userInput)
                                      9 available spots for numbers 2 - 10. Must exclude
                                      numbers 0 and 1 because they are not prime. */
     
-    printf("\nNumbers in array: \n");
+    printf("\nNumbers in the rangeList array: \n");
     // Fill the array with numbers 2 through userInput and print
-    for(int i = 2; i <= userInput; i++)
+    for (i = 2; i <= userInput; i++)
     {
         rangeList[i] = i;
         printf("%d ", rangeList[i]);
@@ -75,8 +77,48 @@ void primeSearch(int userInput)
     
     printf("\n\n");
     
+    int *element;   /* A pointer, element: which points to an int.
+                     This pointer will be used to access and reference the elements
+                     in the array, rangeList */
+    
+    int primeList[LIMIT];   /* The array which will contain the prime numbers */
+    
+    printf("\nNumbers in the rangeList when replacing multiples to 0: \n");
+    
+    for (j = 0; j <= userInput; j++)
+    {
+        element = &rangeList[j]; // element is pointing to the number 2
+        insert = *element;       // insert is now the number 2, insert = 2
+        
+        if (insert != 0)
+        {
+            primeList[j] = insert;
+            
+            if((insert + j) <= userInput)
+            {
+                rangeList[insert + j] = 0;
+            }
+        }
+        
+        printf("%d ", rangeList[j]);
+    }
+    
+    printf("\n\n");
+    
     
 }
+
+// Replace all numbers which are multiples of x to number 0.
+// Put x to a primeList array, which is the array that holds all of the prime numbers
+// from 2 through userInput.
+
+// 1. Go to first element of array and put it in the primeList array.
+// 2. Get the next multiple of that number and replace it with number 0.
+// 3. Repeat, and get the second element of the array.
+    // If second element of the array is 0
+    // then go to the third element in the array
+    // otherwise, put the number in the primeList
+    // and get the next multiple of that number and replace it with number 0.
 
 
 
