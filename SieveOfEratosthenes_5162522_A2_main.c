@@ -1,12 +1,17 @@
 /*
  File name: SieveOfEratosthenes_5162522_A2_main.c
  
- Disclaimer: I hereby certify that this collective work is my own and none of it is the work of any other person or entity.
+ Disclaimer: I hereby certify that this collective work is my own
+             and none of it is the work of any other person or entity.
+ 
  Created by Alicia Rodriguez on 9/24/15.
  Panther ID: 5162522
  
  Description:
- The Main function file
+ The Main function file which prompts the user to choose a number from 2
+ through 10,000 and checks if the input was valid; otherwise, repeat. If
+ input is valid, then it will call the primeSearch function.
+ 
 */
 
 #include "SieveOfEratosthenes_5162522_A2.h"
@@ -47,7 +52,8 @@ int main()
 }
 
 
-/* The primeSearch function will search for the prime numbers between
+/*      ** REMEMBER THIS FUNCTION MUST BE IN A SEPARATE FILE **
+   The primeSearch function will search for the prime numbers between
    2 and userInput */
 void primeSearch(int userInput)
 {
@@ -68,6 +74,8 @@ void primeSearch(int userInput)
     }
     
     printf("\n\n");
+    
+    
 }
 
 
