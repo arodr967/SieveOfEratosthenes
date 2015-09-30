@@ -38,6 +38,7 @@ int main()
         {
             printf("Your input is OK.\n");
             primeSearch(userInput);
+            
         } else {
             printf("Your input is not OK. Please try again. \n");
         }
@@ -46,10 +47,27 @@ int main()
 }
 
 
+/* The primeSearch function will search for the prime numbers between
+   2 and userInput */
 void primeSearch(int userInput)
 {
     printf("Welcome!\n");
     printf("%s %d \n", "We are going to search for all of the prime numbers between 2 and", userInput);
+    
+    int rangeList[userInput - 1];   /* Initialize an array of userInput - 1.
+                                     Ex) If the userInput is 10, then the array needs to have
+                                     9 available spots for numbers 2 - 10. Must exclude
+                                     numbers 0 and 1 because they are not prime. */
+    
+    printf("\nNumbers in array: \n");
+    // Fill the array with numbers 2 through userInput and print
+    for(int i = 2; i <= userInput; i++)
+    {
+        rangeList[i] = i;
+        printf("%d ", rangeList[i]);
+    }
+    
+    printf("\n\n");
 }
 
 
