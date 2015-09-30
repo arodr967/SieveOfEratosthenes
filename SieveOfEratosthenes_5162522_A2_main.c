@@ -16,6 +16,9 @@
 //Constants:
 #define LIMIT 10000
 
+//Prototype:
+void primeSearch(int userInput);
+
 /* Must set the return value to void 
    The compiler on MacBook, does not like the main type to be void */
 int main()
@@ -34,7 +37,24 @@ int main()
         if (userInput >= 2 && userInput <= 10000)
         {
             printf("Your input is OK.\n");
+            primeSearch(userInput);
+        } else {
+            printf("Your input is not OK. Please try again. \n");
         }
         
     } while (userInput < 2 || userInput > 10000);
 }
+
+
+void primeSearch(int userInput)
+{
+    printf("Welcome!\n");
+    printf("%s %d \n", "We are going to search for all of the prime numbers between 2 and", userInput);
+}
+
+
+
+
+
+
+
