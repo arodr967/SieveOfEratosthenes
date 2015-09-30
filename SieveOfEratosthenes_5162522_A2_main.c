@@ -13,7 +13,17 @@
 #include <stdio.h>
 #include <math.h>
 
-/* Must set the return value to void */
-void main()
+//Constants:
+#define LIMIT 10000
+
+/* Must set the return value to void 
+   The compiler on MacBook, does not like the main type to be void */
+int main()
 {
+    int userInput;
+    
+    printf("Please choose a number from 2 - 10000 for your upper limit: \n");
+    scanf("%d", &userInput);
+    
+    printf("%s %d \n", "This is your input: ", userInput);
 }
