@@ -39,7 +39,7 @@ int main()
         
         printf("%s %d \n", "This is your input: ", userInput);
         
-        if (userInput >= 2 && userInput <= 10000)
+        if (userInput >= 2 && userInput <= LIMIT)
         {
             printf("Your input is OK.\n");
             primeSearch(userInput);
@@ -48,7 +48,7 @@ int main()
             printf("Your input is not OK. Please try again. \n");
         }
         
-    } while (userInput < 2 || userInput > 10000);
+    } while (userInput < 2 || userInput > LIMIT);
 }
 
 
