@@ -57,7 +57,7 @@ int main()
    2 and userInput */
 void primeSearch(int userInput)
 {
-    int i, j, insert;
+    int i, j, insert, temp1, temp2;
     
     printf("Welcome!\n");
     printf("%s %d \n", "We are going to search for all of the prime numbers between 2 and", userInput);
@@ -93,11 +93,15 @@ void primeSearch(int userInput)
         if (insert != 0)
         {
             primeList[j] = insert;
+            temp1 = rangeList[insert + j];
             
             if((insert + j) <= userInput)
             {
                 rangeList[insert + j] = 0;
             }
+        } else {
+            temp2 = rangeList[temp1];
+            rangeList[temp1] = 0;
         }
         
         printf("%d ", rangeList[j]);
