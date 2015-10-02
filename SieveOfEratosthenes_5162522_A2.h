@@ -10,5 +10,13 @@
 #define SieveOfEratosthenes_5162522_A2_h
 
 #include <stdio.h>
+#include <math.h>
+
+//Constants:
+#define LIMIT 10000
+#define isPrime 1 //true
+
+//Prototype:
+void primeSearch(int userInput);
 
 #endif /* SieveOfEratosthenes_5162522_A2_h */

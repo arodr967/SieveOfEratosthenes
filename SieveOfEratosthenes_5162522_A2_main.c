@@ -15,14 +15,6 @@
 */
 
 #include "SieveOfEratosthenes_5162522_A2.h"
-#include <stdio.h>
-#include <math.h>
-
-//Constants:
-#define LIMIT 10000
-
-//Prototype:
-void primeSearch(int userInput);
 
 /* Must set the return value to void 
    The compiler on MacBook, does not like the main type to be void */
@@ -57,19 +49,17 @@ int main()
    2 and userInput */
 void primeSearch(int userInput)
 {
-    int i, j, insert, temp1, temp2;
+    int i, index, end, insert, temp;
+    
+    int rangeList[userInput + 1];   /* Initialize an array of userInput + 1, because
+                                       we need numbers 0 through userInput. */
     
     printf("Welcome!\n");
     printf("%s %d \n", "We are going to search for all of the prime numbers between 2 and", userInput);
     
-    int rangeList[userInput - 1];   /* Initialize an array of userInput - 1.
-                                     Ex) If the userInput is 10, then the array needs to have
-                                     9 available spots for numbers 2 - 10. Must exclude
-                                     numbers 0 and 1 because they are not prime. */
-    
     printf("\nNumbers in the rangeList array: \n");
     // Fill the array with numbers 2 through userInput and print
-    for (i = 2; i <= userInput; i++)
+    for (i = 0; i <= userInput; i++)
     {
         rangeList[i] = i;
         printf("%d ", rangeList[i]);
@@ -77,39 +67,82 @@ void primeSearch(int userInput)
     
     printf("\n\n");
     
-    int *element;   /* A pointer, element: which points to an int.
-                     This pointer will be used to access and reference the elements
-                     in the array, rangeList */
+    end = sqrt(userInput);    /* By taking the square root of the userInput,
+                                 that's when we will stop eliminating the multiples
+                                 of each number. Therefore, we don't have to go through
+                                 each element in the rangeList */
+    printf("%s %d \n", "The square root is: ",end);
     
-    int primeList[LIMIT];   /* The array which will contain the prime numbers */
     
-    printf("\nNumbers in the rangeList when replacing multiples to 0: \n");
+//    int *element;   /* A pointer, element: which points to an int.
+//                     This pointer will be used to access and reference the elements
+//                     in the array, rangeList */
+//    
+//    int primeList[userInput];   /* The array of size userInput, 
+//                                 which will contain the prime numbers */
     
-    for (j = 0; j <= userInput; j++)
-    {
-        element = &rangeList[j]; // element is pointing to the number 2
-        insert = *element;       // insert is now the number 2, insert = 2
-        
-        if (insert != 0)
-        {
-            primeList[j] = insert;
-            temp1 = rangeList[insert + j];
-            
-            if((insert + j) <= userInput)
-            {
-                rangeList[insert + j] = 0;
-            }
-        } else {
-            temp2 = rangeList[temp1];
-            rangeList[temp1] = 0;
-        }
-        
-        printf("%d ", rangeList[j]);
-    }
+//    printf("\nNumbers in the rangeList when replacing multiples to 0: \n");
+//    
+//    for (j = 0; j <= userInput; j++)
+//    {
+//        element = &rangeList[j]; // element is pointing to the number 2
+//        insert = *element;       // insert is now the number 2, insert = 2
+//        
+//        if (insert != 0)
+//        {
+//            primeList[j] = insert;
+//            temp1 = rangeList[insert + j];
+//            
+//            if((insert + j) <= userInput)
+//            {
+//                rangeList[insert + j] = 0;
+//            }
+//        } else {
+//            temp2 = rangeList[temp1];
+//            rangeList[temp1] = 0;
+//        }
+//        
+//        printf("%d ", rangeList[j]);
+//    }
+//    
+//    printf("\n\n");
+    
+//    printf("\nPrime numbers list: ");
+//    
+//    for(j = 2; j < userInput; j++)
+//    {
+//        if (rangeList[userInput - 2] % j == 0)
+//        {
+//            rangeList[userInput] = 0;
+//        } else {
+//            primeList[j] = userInput;
+//        }
+//        
+//        //printf("%d ", rangeList[j]);
+//        printf("%d ", primeList[j]);
+//    }
+    
+//    for (index = 0; index <= userInput; index++)
+//    {
+//        if(rangeList[userInput - 2] == 0)
+//        {
+//            userInput = userInput - 1;
+//        }
+//        
+//        if (rangeList[userInput - 2] % rangeList[index] == 0)
+//        {
+//            //not a prime number
+//            rangeList[userInput - 2] = 0;
+//        } else {
+//            //it is a prime number
+//            primeList[index] = rangeList[userInput - 2];
+//        }
+//    }
+//    NO!!!!!
+    
+    
     
     printf("\n\n");
-    
-    
 }
 
 // Replace all numbers which are multiples of x to number 0.
