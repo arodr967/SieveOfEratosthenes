@@ -14,7 +14,7 @@
 
 //Constants:
 #define LIMIT 10000
-#define isPrime 1 //true
+#define isNotPrime 0 //false
 
 //Prototype:
 void primeSearch(int userInput);
