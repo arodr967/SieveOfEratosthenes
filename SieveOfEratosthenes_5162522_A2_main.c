@@ -49,7 +49,7 @@ int main()
    2 and userInput */
 void primeSearch(int userInput)
 {
-    int i, outer, inner, end, num , temp;
+    int fill, index, end, num , temp;
     
     int rangeList[userInput + 1];   /* Initialize an array of userInput + 1, because
                                        we need numbers 0 through userInput. */
@@ -58,11 +58,12 @@ void primeSearch(int userInput)
     printf("%s %d \n", "We are going to search for all of the prime numbers between 2 and", userInput);
     
     printf("\nNumbers in the rangeList array: \n");
+    
     // Fill the array with numbers 2 through userInput and print
-    for (i = 0; i <= userInput; i++)
+    for (fill = 0; fill <= userInput; fill++)
     {
-        rangeList[i] = i;
-        printf("%d ", rangeList[i]);
+        rangeList[fill] = fill;
+        printf("%d ", rangeList[fill]);
     }
     
     printf("\n\n");
@@ -71,33 +72,40 @@ void primeSearch(int userInput)
                                  that's when we will stop eliminating the multiples
                                  of each number. Therefore, we don't have to go through
                                  each element in the rangeList */
-    printf("%s %d \n", "The square root is: ", end);
+    printf("%s %d %s %d\n", "The square root of", userInput, "is:", end);
     
     
-    
-    for(outer = 2; outer <= end; outer++)
+    for(index = 2; index <= end; index++) /* Start at index 2 for the outer loop until
+                                           the sqrt of userInput has been reached */
     {
-        num = outer;    // set num to outer
+        num = index;    // set num to outer
         temp = num;     // and temp to num
         
-        while(temp <= userInput)
+        while(temp <= userInput)    /* Continue until temp is greater than userInput */
         {
-            temp += num; //add num twice to get the next number to eliminate/go-to
+            temp += num; /* add num to itself and set it to temp, to get
+                          the next number to set as isNotPrime or jump to */
             
             /* Check if the value is not already a prime and temp is less thn the userInput */
             if((rangeList[temp] != isNotPrime) && (temp <= userInput))
             {
-                rangeList[temp] = isNotPrime;   /* Mark the value as not prime */
+                rangeList[temp] = isNotPrime;   /* Mark the value as not prime: 0 */
             }
         }
         
     }
     printf("\n");
     
-    //Print again
-    for (i = 2; i <= userInput; i++)
+    /* THINKING ABOUT MAKING THIS INTO A SEPERATE FUNCTION TO PRINT IT */
+    printf("%s %d \n", "The list of prime numbers between 2 and", userInput);
+    
+    for (fill = 2; fill <= userInput; fill++)    /* Print the elements which are not marked
+                                                  isNotPrime */
     {
-        printf("%d ", rangeList[i]);
+        if (rangeList[fill] != isNotPrime)
+        {
+            printf("%d ", rangeList[fill]);
+        }
     }
     
     printf("\n\n");
