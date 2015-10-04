@@ -18,6 +18,6 @@
 
 //Prototype:
 void primeSearch(int userInput);
-void printPrime(int primeList[], int userInput);
+void printPrime(int rangeList[], int userInput);
 
 #endif /* SieveOfEratosthenes_5162522_A2_h */

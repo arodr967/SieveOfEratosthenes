@@ -4,13 +4,15 @@
  Disclaimer: I hereby certify that this collective work is my own
              and none of it is the work of any other person or entity.
  
- Created by Alicia Rodriguez on 9/24/15.
+ Created by Alicia Rodriguez.
  Panther ID: 5162522
+ Due date: 10/06/15 @ 6:25PM
  
  Description:
  The Main function file which prompts the user to choose a number from 2
- through 10,000 and checks if the input was valid; otherwise, repeat. If
- input is valid, then it will call the primeSearch function.
+ through 10,000 and checks if the input is valid; otherwise, repeat. If
+ input is valid, then it will call the primeSearch function, which will
+ search for the prime numbers between that range and then print them.
  
 */
 
@@ -22,7 +24,7 @@ int main()
 {
     int userInput;
     
-    do {
+    do { /* Ask the user at least once */
         
         printf("Please choose a number from 2 - 10000 for your upper limit: ");
         scanf("%d", &userInput);
@@ -44,12 +46,12 @@ int main()
 }
 
 
-/*      ** REMEMBER THIS FUNCTION MUST BE IN A SEPARATE FILE **
+/*      ** REMEMBER FUNCTIONS MUST BE IN A SEPARATE FILE **
    The primeSearch function will search for the prime numbers between
    2 and userInput */
 void primeSearch(int userInput)
 {
-    int fill, index, end, num , temp;
+    int fill, index, end, num, temp;
     
     int rangeList[userInput + 1];   /* Initialize an array of userInput + 1, because
                                        we need numbers 0 through userInput. */
@@ -73,7 +75,6 @@ void primeSearch(int userInput)
                                  of each number. Therefore, we don't have to go through
                                  each element in the rangeList */
     printf("%s %d %s %d\n", "The square root of", userInput, "is:", end);
-    
     
     for(index = 2; index <= end; index++) /* Start at index 2 for the outer loop until
                                            the sqrt of userInput has been reached */
@@ -100,21 +101,43 @@ void primeSearch(int userInput)
 }
 
 /* printPrime function which will print all of the prime numbers between 2 and userInput */
-void printPrime(int primeList[], int userInput)
+void printPrime(int rangeList[], int userInput)
 {
-    int print, count;
+    int print, count, column, row, outer, inner, num;
+    int primeList[LIMIT];
+    
+    column = 9;
+    row = (userInput/column) + 1;   /* Add an extra row for odd userInput  */
+    num = 2;
     
     printf("%s %d%s \n", "The list of prime numbers between 2 and", userInput, ":");
     
-    for (print = 2; print <= userInput; print++)    /* Print the elements which are not marked
-                                                  isNotPrime */
+    
+    for (print = 0; print <= userInput; print++)
     {
-        if (primeList[print] != isNotPrime)
+        if (rangeList[print] != isNotPrime && rangeList[print] != 1)
         {
+            primeList[print] = rangeList[print];
             printf("%d ", primeList[print]);
             count++;
         }
     }
+
+    printf("\n\n");
+    
+    for (outer = 0; outer < row; outer++)
+    {
+        for (inner = 0; inner < column; inner++)
+        {
+            if (primeList[num] != isNotPrime)
+            {
+                printf("%5d ", primeList[num]);
+            }
+            num++;
+        }
+        printf("\n");
+    }
+    
     printf("\n\n");
     
     /* Print how many prime numbers there are */
