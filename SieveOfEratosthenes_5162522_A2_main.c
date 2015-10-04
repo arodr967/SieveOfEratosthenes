@@ -96,21 +96,32 @@ void primeSearch(int userInput)
     }
     printf("\n");
     
-    /* THINKING ABOUT MAKING THIS INTO A SEPERATE FUNCTION TO PRINT IT */
-    printf("%s %d \n", "The list of prime numbers between 2 and", userInput);
+    printPrime(rangeList, userInput); /* Call function to print the prime numbers */
+}
+
+/* printPrime function which will print all of the prime numbers between 2 and userInput */
+void printPrime(int primeList[], int userInput)
+{
+    int print, count;
     
-    for (fill = 2; fill <= userInput; fill++)    /* Print the elements which are not marked
+    printf("%s %d%s \n", "The list of prime numbers between 2 and", userInput, ":");
+    
+    for (print = 2; print <= userInput; print++)    /* Print the elements which are not marked
                                                   isNotPrime */
     {
-        if (rangeList[fill] != isNotPrime)
+        if (primeList[print] != isNotPrime)
         {
-            printf("%d ", rangeList[fill]);
+            printf("%d ", primeList[print]);
+            count++;
         }
     }
+    printf("\n\n");
+    
+    /* Print how many prime numbers there are */
+    printf("%s %d \n", "The number of primes is:", count);
     
     printf("\n\n");
 }
-
 
 
 
