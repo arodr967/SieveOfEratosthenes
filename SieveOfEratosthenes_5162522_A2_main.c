@@ -20,12 +20,12 @@
 
 /* Must set the return value to void 
    The compiler on MacBook, does not like the main type to be void */
-int main()
+void main()
 {
     int userInput;
     
     do { /* Ask the user at least once */
-        
+        printf("\n");
         printf("Please choose a number from 2 - 10000 for your upper limit: ");
         scanf("%d", &userInput);
         
@@ -36,8 +36,7 @@ int main()
         if (userInput >= 2 && userInput <= LIMIT)
         {
             printf("Your input is OK.\n");
-            primeSearch(userInput);
-            
+            primeSieve(userInput);
         } else {
             printf("Your input is not OK. Please try again. \n");
         }
@@ -49,23 +48,24 @@ int main()
 /*      ** REMEMBER FUNCTIONS MUST BE IN A SEPARATE FILE **
    The primeSearch function will search for the prime numbers between
    2 and userInput */
-void primeSearch(int userInput)
+void primeSieve(int userInput)
 {
     int fill, index, end, num, temp;
     
     int rangeList[userInput + 1];   /* Initialize an array of userInput + 1, because
                                        we need numbers 0 through userInput. */
-    
+    printf("\n\n");
     printf("Welcome!\n");
-    printf("%s %d \n", "We are going to search for all of the prime numbers between 2 and", userInput);
+    printf("We are going to sieve for all of the prime numbers between 2 and %d!\n", userInput);
     
-    printf("\nNumbers in the rangeList array: \n");
+    //printf("\nNumbers in the rangeList array: \n");
     
     // Fill the array with numbers 2 through userInput and print
     for (fill = 0; fill <= userInput; fill++)
     {
         rangeList[fill] = fill;
-        printf("%d ", rangeList[fill]);
+        //printf("%d ", rangeList[fill]); 
+		/* To print the array, but not going to because it could fill up the whole screen*/
     }
     
     printf("\n\n");
@@ -74,7 +74,7 @@ void primeSearch(int userInput)
                                  that's when we will stop eliminating the multiples
                                  of each number. Therefore, we don't have to go through
                                  each element in the rangeList */
-    printf("%s %d %s %d\n", "The square root of", userInput, "is:", end);
+    printf("For sieving purposes, the approximate square root of %d is: %d\n", userInput, end);
     
     for(index = 2; index <= end; index++) /* Start at index 2 for the outer loop until
                                            the sqrt of userInput has been reached */
@@ -88,9 +88,9 @@ void primeSearch(int userInput)
                           the next number to set as isNotPrime or jump to */
             
             /* Check if the value is not already a prime and temp is less thn the userInput */
-            if((rangeList[temp] != isNotPrime) && (temp <= userInput))
+            if((rangeList[temp] != NOT_PRIME) && (temp <= userInput))
             {
-                rangeList[temp] = isNotPrime;   /* Mark the value as not prime: 0 */
+                rangeList[temp] = NOT_PRIME;   /* Mark the value as not prime: 0 */
             }
         }
         
@@ -103,51 +103,35 @@ void primeSearch(int userInput)
 /* printPrime function which will print all of the prime numbers between 2 and userInput */
 void printPrime(int rangeList[], int userInput)
 {
-    int print, count, column, row, outer, inner, num;
+    int print, count, column;
     int primeList[LIMIT];
+	
+	print = column = count = 0; /* Set all of the variables to 0 */
     
-    column = 9;
-    row = (userInput/column) + 1;   /* Add an extra row for odd userInput  */
-    num = 2;
+    printf("The list of prime numbers between 2 and %d: \n", userInput);
     
-    printf("%s %d%s \n", "The list of prime numbers between 2 and", userInput, ":");
-    
-    
-    for (print = 0; print <= userInput; print++)
+    for (; print <= userInput; print++)
     {
-        if (rangeList[print] != isNotPrime && rangeList[print] != 1)
+        if (rangeList[print] != NOT_PRIME && rangeList[print] != 1)
         {
-            primeList[print] = rangeList[print];
-            printf("%d ", primeList[print]);
-            count++;
+            primeList[print] = print;	/* Copy the prime numbers into the primeList array */
+            printf("%6d ", primeList[print]);
+			
+			count++;	/* Increment the count of prime numbers */
+			column++;	/* Increment the columns to align the output */
+			
+			if (column == 8)	/* Start a new column when column is equal to 8 */
+			{
+				printf("\n");
+				column = 0;
+			}
         }
     }
-
-    printf("\n\n");
-    
-    for (outer = 0; outer < row; outer++)
-    {
-        for (inner = 0; inner < column; inner++)
-        {
-            if (primeList[num] != isNotPrime)
-            {
-                printf("%5d ", primeList[num]);
-            }
-            num++;
-        }
-        printf("\n");
-    }
-    
+ 
     printf("\n\n");
     
     /* Print how many prime numbers there are */
-    printf("%s %d \n", "The number of primes is:", count);
+    printf("There are %d prime numbers!\n", count);
     
     printf("\n\n");
 }
-
-
-
-
-
-
