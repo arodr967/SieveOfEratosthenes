@@ -14,10 +14,10 @@
 
 //Constants:
 #define LIMIT 10000
-#define isNotPrime 0 //false
+#define NOT_PRIME 0 //false
 
 //Prototype:
-void primeSearch(int userInput);
+void primeSieve(int userInput);
 void printPrime(int rangeList[], int userInput);
 
 #endif /* SieveOfEratosthenes_5162522_A2_h */
