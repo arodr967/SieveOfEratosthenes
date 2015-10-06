@@ -5,9 +5,10 @@ _"The Sieve of Eratosthenes is a simple, ancient algorithm for finding all prime
 
 -------------
 
-Generate a table of prime numbers for integers not to exceed 10000. Output format in columns, right-aligned.
-Implement the Sieve of Eratosthenes algorithm to isolate the prime numbers.
+Generate a table of prime numbers for integers not to exceed 10000. Output format in columns, right-aligned. Implement the Sieve of Eratosthenes algorithm to isolate the prime numbers.
+
 As specified in the assignment specifications, "Must use arrays and may use pointers", I used array and chose not to use pointers.
+
 This program includes seperate source code files for the main, primeSieve, and printPrime functions, as well as the user-defined header file.
 
 __Input__: Accept user input for the upper limit of the prime search (2-10000). Validate user input. 
@@ -30,7 +31,7 @@ If running the program in __OS X__, please use the following:
 
 gcc SieveOfEratosthenes_A2_main.c SieveOfEratosthenes_A2_primeSieve.c SieveOfEratosthenes_A2_printPrime.c SieveOfEratosthenes_A2.h
 
-__WARNING__: When running the main function as type void, the compiler complains and insist that it should be int.
+__WARNING__: When running the main function as type void, the compiler complains and insist that it should be type int.
 
 
 
