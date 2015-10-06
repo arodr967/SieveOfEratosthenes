@@ -16,11 +16,11 @@
 
     For sieving purposes, the approximate square root of 100 is: 10
 
-        The list of prime numbers between 2 and 100:
-        2      3      5      7     11     13     17     19
-        23     29     31     37     41     43     47     53
-        59     61     67     71     73     79     83     89
-        97
+    The list of prime numbers between 2 and 100:
+    2      3      5      7     11     13     17     19
+    23     29     31     37     41     43     47     53
+    59     61     67     71     73     79     83     89
+    97
 
     There are 25 prime numbers!
 
@@ -29,22 +29,22 @@
 ### User input specified as 10,000 ###
 
 
-   Please choose a number from 2 - 10000 for your upper limit: 10000
+    Please choose a number from 2 - 10000 for your upper limit: 10000
 
-   This is your input:  10000
-   Your input is OK.
-
-
-   Welcome!
-   We are going to sieve for all of the prime numbers between 2 and 10000!
+    This is your input:  10000
+    Your input is OK.
 
 
-   For sieving purposes, the approximate square root of 10000 is: 100
+    Welcome!
+    We are going to sieve for all of the prime numbers between 2 and 10000!
 
-   The list of prime numbers between 2 and 10000:
-   2      3      5      7     11     13     17     19
-23     29     31     37     41     43     47     53
-59     61     67     71     73     79     83     89
+
+    For sieving purposes, the approximate square root of 10000 is: 100
+
+    The list of prime numbers between 2 and 10000:
+    2      3      5      7     11     13     17     19
+    23     29     31     37     41     43     47     53
+    59     61     67     71     73     79     83     89
 97    101    103    107    109    113    127    131
 137    139    149    151    157    163    167    173
 179    181    191    193    197    199    211    223
@@ -197,5 +197,5 @@
 9859   9871   9883   9887   9901   9907   9923   9929
 9931   9941   9949   9967   9973
 
-There are 1229 prime numbers!
+    There are 1229 prime numbers!
 
