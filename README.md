@@ -22,7 +22,7 @@ If running the program in __Lenux__ or __Windows__, please use the following:
 
 gcc SieveOfEratosthenes_A2_main.c SieveOfEratosthenes_A2_primeSieve.c SieveOfEratosthenes_A2_printPrime.c SieveOfEratosthenes_A2.h -lm
 
-__NOTE__: Must use -lm, because of <math.h>
+__NOTE__: Must use -lm, because of _<math.h>_
 
 
 If running the program in __OS X__, please use the following:
