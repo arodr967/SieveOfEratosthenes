@@ -17,6 +17,7 @@ __Output__: Generate a table of prime numbers for integers not to exceed 10000. 
 
 
 ### How to compile and link files for execution: ###
+..
 
 If running the program in __Lenux__ or __Windows__, please use the following:
 
