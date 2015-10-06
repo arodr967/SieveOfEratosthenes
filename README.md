@@ -1,4 +1,4 @@
-# SieveOfEratosthenes #
+# Sieve Of Eratosthenes #
 Program in C.
 
 _"The Sieve of Eratosthenes is a simple, ancient algorithm for finding all prime numbers up to a specified integer."_
