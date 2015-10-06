@@ -2,7 +2,7 @@
   File name: SieveOfEratosthenes_A2_primeSieve.c
 */
 
-#include "SieveOfEratosthenes_5162522_A2.h"
+#include "SieveOfEratosthenes_A2.h"
 
 /* The primeSieve function will search for the prime numbers between
    2 and userInput and set them as NOT_PRIME */

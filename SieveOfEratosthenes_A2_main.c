@@ -16,7 +16,7 @@
  
 */
 
-#include "SieveOfEratosthenes_5162522_A2.h"
+#include "SieveOfEratosthenes_A2.h"
 
 /* Main function which validates user input. */
 void main()

@@ -1,10 +1,10 @@
 /*
-  File name: SieveOfEratosthenes_5162522_A2.h
+  File name: SieveOfEratosthenes_A2.h
   User-defined header file.
 */
 
-#ifndef SieveOfEratosthenes_5162522_A2_h
-#define SieveOfEratosthenes_5162522_A2_h
+#ifndef SieveOfEratosthenes_A2_h
+#define SieveOfEratosthenes_A2_h
 
 #include <stdio.h>
 #include <math.h>
@@ -17,4 +17,4 @@
 void primeSieve(int userInput);
 void printPrime(int rangeList[], int userInput);
 
-#endif /* SieveOfEratosthenes_5162522_A2_h */
+#endif /* SieveOfEratosthenes_A2_h */
