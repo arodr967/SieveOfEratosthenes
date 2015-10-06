@@ -1,5 +1,5 @@
 /*
- File name: SieveOfEratosthenes_5162522_A2_main.c
+ File name: SieveOfEratosthenes_A2_main.c
  
  Disclaimer: I hereby certify that this collective work is my own
              and none of it is the work of any other person or entity.
@@ -18,8 +18,7 @@
 
 #include "SieveOfEratosthenes_5162522_A2.h"
 
-/* Must set the return value to void 
-   The compiler on MacBook, does not like the main type to be void */
+/* Main function which validates user input. */
 void main()
 {
     int userInput;

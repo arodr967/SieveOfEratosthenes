@@ -1,10 +1,7 @@
-//
-//  SieveOfEratosthenes_5162522_A2.h
-//  
-//
-//  Created by Alicia Rodriguez on 9/24/15.
-//
-//
+/*
+  File name: SieveOfEratosthenes_5162522_A2.h
+  User-defined header file.
+*/
 
 #ifndef SieveOfEratosthenes_5162522_A2_h
 #define SieveOfEratosthenes_5162522_A2_h

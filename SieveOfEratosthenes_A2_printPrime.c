@@ -1,9 +1,8 @@
-//
-//  SieveOfEratosthenes_A2_printPrime.c
-//
+/*
+  File name: SieveOfEratosthenes_A2_printPrime.c
+*/
 
 #include "SieveOfEratosthenes_5162522_A2.h"
-
 
 /* printPrime function which will print all of the prime numbers between 2 and userInput */
 void printPrime(int rangeList[], int userInput)

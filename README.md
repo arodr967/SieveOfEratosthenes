@@ -19,12 +19,16 @@ How to compile and link files for execution:
 
 If running the program in Lenux or Windows, please use the following:
 
-gcc SieveOfEratosthenes_5162522_A2_main.c SieveOfEratosthenes_5162522_A2.h -lm
+gcc SieveOfEratosthenes_A2_main.c SieveOfEratosthenes_A2_primeSieve.c SieveOfEratosthenes_A2_printPrime.c SieveOfEratosthenes_5162522_A2.h -lm
+
+NOTE: Must use -lm, because of <math.h>
 
 
 If running the program in OS X, please use the following: 
 
-gcc SieveOfEratosthenes_5162522_A2_main.c SieveOfEratosthenes_5162522_A2.h
+gcc SieveOfEratosthenes_A2_main.c SieveOfEratosthenes_A2_primeSieve.c SieveOfEratosthenes_A2_printPrime.c SieveOfEratosthenes_5162522_A2.h
+
+WARNING: When running the main function as type void, the compiler complains and insist that it should be int.
 
 
 
