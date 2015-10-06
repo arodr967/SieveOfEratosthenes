@@ -15,7 +15,7 @@ Output: Generate a table of prime numbers for integers not to exceed 10000. Outp
 
 How to compile and link files for execution:
 
-If running the program in Linux or Windows, please use the following to compile:
+If running the program in Linux or Ubuntu, please use the following to compile:
 
 gcc SieveOfEratosthenes_A2_main.c SieveOfEratosthenes_A2_primeSieve.c SieveOfEratosthenes_A2_printPrime.c SieveOfEratosthenes_A2.h -lm
 
