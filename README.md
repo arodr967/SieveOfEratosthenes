@@ -3,7 +3,7 @@ Program in C.
 
 "The Sieve of Eratosthenes is a simple, ancient algorithm for finding all prime numbers up to a specified integer."
 
-
+-------------
 
 Generate a table of prime numbers for integers not to exceed 10000. Output format in columns, right-aligned.
 Implement the Sieve of Eratosthenes algorithm to isolate the prime numbers.
@@ -18,16 +18,16 @@ __Output__: Generate a table of prime numbers for integers not to exceed 10000. 
 
 ### How to compile and link files for execution: ###
 
-If running the program in __Lenux__ or __Windows__, please use the following:
+_If running the program in __Lenux__ or __Windows__, please use the following:_
 
-gcc SieveOfEratosthenes_A2_main.c SieveOfEratosthenes_A2_primeSieve.c SieveOfEratosthenes_A2_printPrime.c SieveOfEratosthenes_5162522_A2.h -lm
+gcc SieveOfEratosthenes_A2_main.c SieveOfEratosthenes_A2_primeSieve.c SieveOfEratosthenes_A2_printPrime.c SieveOfEratosthenes_A2.h -lm
 
 __NOTE__: Must use -lm, because of <math.h>
 
 
-If running the program in __OS X__, please use the following: 
+_If running the program in __OS X__, please use the following:_
 
-gcc SieveOfEratosthenes_A2_main.c SieveOfEratosthenes_A2_primeSieve.c SieveOfEratosthenes_A2_printPrime.c SieveOfEratosthenes_5162522_A2.h
+gcc SieveOfEratosthenes_A2_main.c SieveOfEratosthenes_A2_primeSieve.c SieveOfEratosthenes_A2_printPrime.c SieveOfEratosthenes_A2.h
 
 __WARNING__: When running the main function as type void, the compiler complains and insist that it should be int.
 
