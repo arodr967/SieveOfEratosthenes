@@ -20,14 +20,14 @@ __Output__: Generate a table of prime numbers for integers not to exceed 10000. 
 ### How to compile and link files for execution: ###
 
 
-If running the program in __Linux__ or __Windows__, please use the following:
+If running the program in __Linux__ or __Windows__, please use the following to compile:
 
 gcc SieveOfEratosthenes_A2_main.c SieveOfEratosthenes_A2_primeSieve.c SieveOfEratosthenes_A2_printPrime.c SieveOfEratosthenes_A2.h -lm
 
 __NOTE__: Must use -lm, because of _< math.h >_
 
 
-If running the program in __OS X__, please use the following:
+If running the program in __OS X__, please use the following to compile:
 
 gcc SieveOfEratosthenes_A2_main.c SieveOfEratosthenes_A2_primeSieve.c SieveOfEratosthenes_A2_printPrime.c SieveOfEratosthenes_A2.h
 
