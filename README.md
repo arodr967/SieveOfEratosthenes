@@ -3,7 +3,7 @@ Program in C.
 
 "The Sieve of Eratosthenes is a simple, ancient algorithm for finding all prime numbers up to a specified integer."
 
-
+-------------
 
 Generate a table of prime numbers for integers not to exceed 10000. Output format in columns, right-aligned.
 Implement the Sieve of Eratosthenes algorithm to isolate the prime numbers.
