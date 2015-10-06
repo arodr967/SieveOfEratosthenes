@@ -4,27 +4,27 @@
 ### User input specified as 100 ###
 
 
-Please choose a number from 2 - 10000 for your upper limit: 100
+    Please choose a number from 2 - 10000 for your upper limit: 100
 
-This is your input:  100
-Your input is OK.
-
-
-Welcome!
-We are going to sieve for all of the prime numbers between 2 and 100!
+    This is your input:  100
+    Your input is OK.
 
 
-For sieving purposes, the approximate square root of 100 is: 10
-
-The list of prime numbers between 2 and 100:
-2      3      5      7     11     13     17     19
-23     29     31     37     41     43     47     53
-59     61     67     71     73     79     83     89
-97
-
-There are 25 prime numbers!
+    Welcome!
+    We are going to sieve for all of the prime numbers between 2 and 100!
 
 
+    For sieving purposes, the approximate square root of 100 is: 10
+
+    The list of prime numbers between 2 and 100:
+    2      3      5      7     11     13     17     19
+    23     29     31     37     41     43     47     53
+    59     61     67     71     73     79     83     89
+    97
+
+    There are 25 prime numbers!
+
+    
 ----
 ### User input specified as 10,000 ###
 
