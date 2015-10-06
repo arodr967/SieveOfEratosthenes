@@ -10,9 +10,8 @@ Implement the Sieve of Eratosthenes algorithm to isolate the prime numbers.
 As specified in the assignment specifications, "Must use arrays and may use pointers", I used array and chose not to use pointers.
 This program includes seperate source code files for the main, primeSieve, and printPrime functions, as well as the user-defined header file.
 
-** Input **: Accept user input for the upper limit of the prime search (2-10000). Validate user input. 
-
-** Output **: Generate a table of prime numbers for integers not to exceed 10000. Output format in columns, right-aligned.
+__Input__: Accept user input for the upper limit of the prime search (2-10000). Validate user input. 
+__Output__: Generate a table of prime numbers for integers not to exceed 10000. Output format in columns, right-aligned.
 
 
 How to compile and link files for execution:
