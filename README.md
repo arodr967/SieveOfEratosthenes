@@ -11,23 +11,29 @@ As specified in the assignment specifications, "Must use arrays and may use poin
 This program includes seperate source code files for the main, primeSieve, and printPrime functions, as well as the user-defined header file.
 
 __Input__: Accept user input for the upper limit of the prime search (2-10000). Validate user input. 
+
+
 __Output__: Generate a table of prime numbers for integers not to exceed 10000. Output format in columns, right-aligned.
 
 
-How to compile and link files for execution:
+### How to compile and link files for execution: ###
 
-If running the program in Lenux or Windows, please use the following:
+If running the program in __Lenux__ or __Windows__, please use the following:
 
-gcc SieveOfEratosthenes_5162522_A2_main.c SieveOfEratosthenes_5162522_A2.h -lm
+gcc SieveOfEratosthenes_A2_main.c SieveOfEratosthenes_A2_primeSieve.c SieveOfEratosthenes_A2_printPrime.c SieveOfEratosthenes_5162522_A2.h -lm
 
-
-If running the program in OS X, please use the following: 
-
-gcc SieveOfEratosthenes_5162522_A2_main.c SieveOfEratosthenes_5162522_A2.h
+__NOTE__: Must use -lm, because of <math.h>
 
 
+If running the program in __OS X__, please use the following: 
 
-References: 
+gcc SieveOfEratosthenes_A2_main.c SieveOfEratosthenes_A2_primeSieve.c SieveOfEratosthenes_A2_printPrime.c SieveOfEratosthenes_5162522_A2.h
+
+__WARNING__: When running the main function as type void, the compiler complains and insist that it should be int.
+
+
+
+_References_: 
 
 http://stackoverflow.com/questions/8548909/smart-way-to-format-tables-on-stdout-in-c-c
 http://stackoverflow.com/questions/757627/how-do-i-align-a-number-like-this-in-c
