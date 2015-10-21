@@ -2,7 +2,7 @@
  File name: SieveOfEratosthenes_A2_main.c
  
  Disclaimer: I hereby certify that this collective work is my own
-             and none of it is the work of any other person or entity.
+ and none of it is the work of any other person or entity.
  
  Created by Alicia Rodriguez.
  Panther ID: 5162522
@@ -14,14 +14,15 @@
  input is valid, then it will call the primeSearch function, which will
  search for the prime numbers between that range and then print them.
  
-*/
+ */
 
 #include "SieveOfEratosthenes_A2.h"
 
 /* Main function which validates user input. */
-void main()
+int main()
 {
     int userInput;
+    char buffer;
     
     do { /* Ask the user at least once */
         printf("\n");
@@ -30,15 +31,16 @@ void main()
         
         printf("\n");
         
-        printf("%s %d \n", "This is your input: ", userInput);
-        
-        if (userInput >= 2 && userInput <= LIMIT)
+        if (userInput >= MIN && userInput <= LIMIT)
         {
             printf("Your input is OK.\n");
             primeSieve(userInput);
         } else {
             printf("Your input is not OK. Please try again. \n");
+            while((buffer = getchar()) != '\n' && buffer != EOF); /* To prevent an infinate loop */
         }
         
-    } while (userInput < 2 || userInput > LIMIT);
+    } while (userInput < MIN || userInput > LIMIT);
+    
+    return 0;
 }

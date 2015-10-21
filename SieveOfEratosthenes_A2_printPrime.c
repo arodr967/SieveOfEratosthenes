@@ -1,6 +1,6 @@
 /*
-  File name: SieveOfEratosthenes_A2_printPrime.c
-*/
+ File name: SieveOfEratosthenes_A2_printPrime.c
+ */
 
 #include "SieveOfEratosthenes_A2.h"
 
@@ -24,7 +24,7 @@ void printPrime(int rangeList[], int userInput)
             count++;	/* Increment the count of prime numbers */
             column++;	/* Increment the columns to align the output */
             
-            if (column == 8)	/* Start a new column when column is equal to 8 */
+            if (column == COLUMN)	/* Start a new column when column is equal to 8 */
             {
                 printf("\n");
                 column = 0;

@@ -1,11 +1,11 @@
 /*
-  File name: SieveOfEratosthenes_A2_primeSieve.c
-*/
+ File name: SieveOfEratosthenes_A2_primeSieve.c
+ */
 
 #include "SieveOfEratosthenes_A2.h"
 
 /* The primeSieve function will search for the prime numbers between
-   2 and userInput and set them as NOT_PRIME */
+ 2 and userInput and set them as NOT_PRIME */
 void primeSieve(int userInput)
 {
     int fill, index, end, num, temp;
