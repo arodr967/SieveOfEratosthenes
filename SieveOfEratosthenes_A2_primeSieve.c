@@ -43,7 +43,7 @@ void primeSieve(int userInput)
                           the next number to set as isNotPrime or jump to */
             
             /* Check if the value is not already a prime and temp is less thn the userInput */
-            if((rangeList[temp] != NOT_PRIME) && (temp <= userInput))
+            if((temp <= userInput) && (rangeList[temp] != NOT_PRIME))
             {
                 rangeList[temp] = NOT_PRIME;   /* Mark the value as not prime: 0 */
             }
